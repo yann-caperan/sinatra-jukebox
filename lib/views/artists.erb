@@ -1,0 +1,9 @@
+<h2>Albums</h2>
+<ul class="list-group">
+
+<% @albums.each do |album| %>
+  <li class="list-group-item">
+    <a href="/albums/<%=album[0]%>"
+      class="list-group-item list-group-item-action"> 💽 <%= album[1] %> </a>
+  </li>
+<% end %>

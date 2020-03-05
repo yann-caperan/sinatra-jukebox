@@ -1,0 +1,26 @@
+<h2>Tracks infos</h2>
+<ul class="list-group">
+<% @infos.each do |info| %>
+  <li class="list-group-item"> id = <%= info[0] %> </li>
+  <li class="list-group-item"> album_id = <%= info[1] %> </li>
+  <li class="list-group-item"> media_type_id = <%= info[2] %> </li>
+  <li class="list-group-item"> genre_id = <%= info[3] %> </li>
+  <li class="list-group-item"> name = <%= info[4] %> </li>
+  <li class="list-group-item"> composer = <%= info[5] %> </li>
+  <li class="list-group-item"> miliseconds = <%= info[6] %> </li>
+  <li class="list-group-item"> bytes = <%= info[7] %> </li>
+  <li class="list-group-item"> unit_prices = <%= info[8] %> € </li>
+<% end %>
+
+<iframe id="player" type="text/html" width="640" height="360"
+  src="http://www.youtube.com/embed?listType=search&list= <%= @infos[0][4] %> <%= @infos[0][5] %>"
+  frameborder="0">
+  </iframe>
+
+<script>
+  player.cuePlaylist({listType:search,
+                    list:String,
+                    index:Number,
+                    startSeconds:Number,
+                    suggestedQuality:String}):Void
+</script>

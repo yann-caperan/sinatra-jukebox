@@ -1,0 +1,8 @@
+<h2>Tracks</h2>
+<ul class="list-group">
+<% @tracks.each do |track| %>
+  <li class="list-group-item">
+    <a href="/tracks/<%=track[1]%>"
+      class="list-group-item list-group-item-action"> 🎵 <%= track[0] %> </a>
+  </li>
+<% end %>
