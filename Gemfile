@@ -6,4 +6,7 @@ gem "better_errors"
 gem "binding_of_caller"
 gem "faker"
 gem "pry-byebug"
-gem "sqlite3"
+
+group :test, :production do
+    gem 'pg'
+end
